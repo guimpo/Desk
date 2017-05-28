@@ -12,5 +12,5 @@ package C.Model;
 interface BolsaFamilia
 {
     boolean ehBeneficiario();
-    void bolsaFamilia(boolean participa);
+    void setBolsaFamilia(boolean participa);
 }

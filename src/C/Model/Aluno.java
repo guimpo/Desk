@@ -5,6 +5,8 @@
  */
 package C.Model;
 
+import java.util.List;
+
 /**
  *
  * @author paulo
@@ -16,6 +18,7 @@ public class Aluno implements BolsaFamilia
     private String mae = "";
     private String pai = "";
     private boolean bolsaFamilia = false;
+    private List<Matricula> matriculas = null;
 
     /**
      * @return the codMunicipal
@@ -92,7 +95,7 @@ public class Aluno implements BolsaFamilia
     /**
      * @param bolsaFamilia the bolsaFamilia to set
      */
-    public void bolsaFamilia(boolean bolsaFamilia)
+    public void setBolsaFamilia(boolean bolsaFamilia)
     {
         this.bolsaFamilia = bolsaFamilia;
     }

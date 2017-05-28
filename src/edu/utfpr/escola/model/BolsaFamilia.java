@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package C.Model;
+package edu.utfpr.escola.model;
 
 /**
  *
  * @author paulo
  */
-public interface MatrizCurricular
+interface BolsaFamilia
 {
-    MatrizCurricular getInstance(String tipo);
+    boolean ehBeneficiario();
+    void setBolsaFamilia(boolean participa);
 }

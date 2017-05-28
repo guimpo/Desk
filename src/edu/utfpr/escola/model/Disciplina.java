@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package C.Model;
+package edu.utfpr.escola.model;
+
+import java.io.Serializable;
 
 /**
  *
  * @author paulo
  */
-interface BolsaFamilia
+public class Disciplina
 {
-    boolean ehBeneficiario();
-    void setBolsaFamilia(boolean participa);
+    private String nome = "";
 }

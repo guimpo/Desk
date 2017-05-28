@@ -5,28 +5,32 @@
  */
 package C.Model;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author paulo
  */
-public class Aluno implements Serializable
+public class Aluno implements BolsaFamilia
 {
-    private String nome;
-    private String codMunicipal;
-    private String mae;
-    private String pai;
-    private String responsavel;
-    private String dataNascimento;
-    private boolean beneficiario = false;
-    private List<Trimestre> trimestres;
+    private int codMunicipal = 0;
+    private String nome = "";
+    private String mae = "";
+    private String pai = "";
+    private boolean bolsaFamilia = false;
 
-    public Aluno()
+    /**
+     * @return the codMunicipal
+     */
+    public int getCodMunicipal()
     {
-        this.trimestres = new ArrayList<Trimestre>();
+        return codMunicipal;
+    }
+
+    /**
+     * @param codMunicipal the codMunicipal to set
+     */
+    public void setCodMunicipal(int codMunicipal)
+    {
+        this.codMunicipal = codMunicipal;
     }
 
     /**
@@ -43,22 +47,6 @@ public class Aluno implements Serializable
     public void setNome(String nome)
     {
         this.nome = nome;
-    }
-
-    /**
-     * @return the codMunicipal
-     */
-    public String getCodMunicipal()
-    {
-        return codMunicipal;
-    }
-
-    /**
-     * @param codMunicipal the codMunicipal to set
-     */
-    public void setCodMunicipal(String codMunicipal)
-    {
-        this.codMunicipal = codMunicipal;
     }
 
     /**
@@ -94,72 +82,18 @@ public class Aluno implements Serializable
     }
 
     /**
-     * @return the responsavel
+     * @return the bolsaFamilia
      */
-    public String getResponsavel()
+    public boolean ehBeneficiario()
     {
-        return responsavel;
+        return bolsaFamilia;
     }
 
     /**
-     * @param responsavel the responsavel to set
+     * @param bolsaFamilia the bolsaFamilia to set
      */
-    public void setResponsavel(String responsavel)
+    public void bolsaFamilia(boolean bolsaFamilia)
     {
-        this.responsavel = responsavel;
-    }
-
-    /**
-     * @return the dataNascimento
-     */
-    public String getDataNascimento()
-    {
-        return dataNascimento;
-    }
-
-    /**
-     * @param dataNascimento the dataNascimento to set
-     */
-    public void setDataNascimento(String dataNascimento)
-    {
-        this.dataNascimento = dataNascimento;
-    }
-
-    /**
-     * @return the beneficiario
-     */
-    public boolean isBeneficiario()
-    {
-        return beneficiario;
-    }
-
-    /**
-     * @param beneficiario the beneficiario to set
-     */
-    public void setBeneficiario(boolean beneficiario)
-    {
-        this.beneficiario = beneficiario;
-    }
-
-    /**
-     * @return the frequencia
-     */
-    public List<Trimestre> getTrimestres()
-    {
-        return trimestres;
-    }
-
-    /**
-     * @param frequencia the frequencia to set
-     */
-    public void setTrimestre(Trimestre trimestre)
-    {
-        this.trimestres.add(trimestre);
-    }
-    
-    public boolean equals(Aluno aluno)
-    {
-        
-        return aluno.getCodMunicipal().equals(this.codMunicipal);
+        this.bolsaFamilia = bolsaFamilia;
     }
 }

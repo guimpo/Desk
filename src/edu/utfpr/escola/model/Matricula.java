@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class Matricula
 {
+    private Long id = null;
     private String dataMatricula;
     private String dataTranferencia;
     private String turma;
@@ -81,6 +82,11 @@ public class Matricula
     public void setTurma(String turma)
     {
         this.turma = turma;
+    }
+    
+    public Long getId()
+    {
+        return this.id;
     }
 
 }

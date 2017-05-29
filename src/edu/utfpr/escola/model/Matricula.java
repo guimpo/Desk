@@ -15,23 +15,24 @@ public class Matricula
 {
     private String dataMatricula;
     private String dataTranferencia;
+    private String turma;
     private Aluno aluno = null;
-    private AnoLetivo anoLetivo = null;
+    private MatrizCurricular matrizCurricular = null;
 
+    public Matricula(MatrizCurricular matrizCurricular, Aluno aluno, String dataMatricula, String turma)
+    {
+        this.matrizCurricular = matrizCurricular;
+        this.aluno = aluno;
+        this.dataMatricula = dataMatricula;
+        this.turma = turma;
+    }
+    
     /**
      * @return the dataMatricula
      */
     public String getDataMatricula()
     {
         return dataMatricula;
-    }
-
-    /**
-     * @param dataMatricula the dataMatricula to set
-     */
-    public void setDataMatricula(String dataMatricula)
-    {
-        this.dataMatricula = dataMatricula;
     }
 
     /**
@@ -59,26 +60,27 @@ public class Matricula
     }
 
     /**
-     * @param aluno the aluno to set
-     */
-    public void setAluno(Aluno aluno)
-    {
-        this.aluno = aluno;
-    }
-
-    /**
      * @return the anoLetivo
      */
-    public AnoLetivo getAnoLetivo()
+    public int getAnoLetivo()
     {
-        return anoLetivo;
+        return this.matrizCurricular.getAnoLetivo();
     }
 
     /**
-     * @param anoLetivo the anoLetivo to set
+     * @return the turma
      */
-    public void setAnoLetivo(AnoLetivo anoLetivo)
+    public String getTurma()
     {
-        this.anoLetivo = anoLetivo;
+        return turma;
     }
+
+    /**
+     * @param turma the turma to set
+     */
+    public void setTurma(String turma)
+    {
+        this.turma = turma;
+    }
+
 }

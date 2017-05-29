@@ -5,13 +5,40 @@
  */
 package edu.utfpr.escola.model;
 
+import java.util.List;
+
 /**
  *
  * @author paulo
  */
-class AnoLetivo
+public class AnoLetivo implements MatrizCurricular
 {
-    private int ano = 0;
-    private int diasLetivosAnual = 0;
-    private MatrizCurricular matrizCurricular = null;
+    private List<Disciplina> disciplinas = null;
+    private int anoLetivo = 0;
+    private int diasLetivos = 0;
+    
+    public AnoLetivo(int anoLetivo, int diasLetivos, List<Disciplina> disciplinas)
+    {
+        this.anoLetivo = anoLetivo;
+        this.diasLetivos = diasLetivos;
+        this.disciplinas = disciplinas;
+    }
+
+    @Override
+    public List<Disciplina> getDisciplinas()
+    {
+        return this.disciplinas;
+    }
+
+    @Override
+    public int getAnoLetivo()
+    {
+        return this.anoLetivo;
+    }
+
+    @Override
+    public int getDiasLetivos()
+    {
+        return this.diasLetivos;
+    }
 }

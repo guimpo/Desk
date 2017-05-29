@@ -5,6 +5,7 @@
  */
 package edu.utfpr.escola.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,6 +21,16 @@ public class Aluno implements BolsaFamilia
     private boolean bolsaFamilia = false;
     private List<Matricula> matriculas = null;
 
+    public Aluno(int codMunicipal, String nome, String mae, String pai, boolean bolsaFamilia)
+    {
+        this.codMunicipal = codMunicipal;
+        this.nome = nome;
+        this.mae = mae;
+        this.pai = pai;
+        this.bolsaFamilia = bolsaFamilia;
+        this.matriculas = new ArrayList<Matricula>();
+    }
+    
     /**
      * @return the codMunicipal
      */
@@ -98,5 +109,15 @@ public class Aluno implements BolsaFamilia
     public void setBolsaFamilia(boolean bolsaFamilia)
     {
         this.bolsaFamilia = bolsaFamilia;
+    }
+    
+    public void addMatricula(Matricula matricula)
+    {
+        this.matriculas.add(matricula);
+    }
+    
+    public Matricula getMatricula(int i)
+    {
+        return this.matriculas.get(i);
     }
 }

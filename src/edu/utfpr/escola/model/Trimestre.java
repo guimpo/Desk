@@ -18,6 +18,7 @@ public class Trimestre implements Divisao
     {
         private final int diasLetivos;
         private int faltas = 0;
+        private double mediaTrimestre = 0.0;
         
         public Estrutura(int diasLetivos)
         {
@@ -40,7 +41,6 @@ public class Trimestre implements Divisao
     }
     
     List<Estrutura> trimestres = null;
-    
     
     private Trimestre() {};
     

@@ -5,15 +5,11 @@
  */
 package edu.utfpr.escola.model;
 
-import java.util.List;
-
 /**
  *
  * @author paulo
  */
-public interface MatrizCurricular
+public interface ProcedimentoAvaliativo
 {
-    List<Disciplina> getDisciplinas();
-    int getAnoLetivo();
-    int getDiasLetivos();
+    ProcedimentoAvaliativo getInstance();
 }

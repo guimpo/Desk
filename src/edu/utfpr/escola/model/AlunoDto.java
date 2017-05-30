@@ -11,7 +11,7 @@ package edu.utfpr.escola.model;
  */
 public class AlunoDto
 {
-    private Long id;
+    private Integer id;
     private int codMuncipal;
     private String nome;
     private String mae;
@@ -19,7 +19,17 @@ public class AlunoDto
     private boolean bolsaFamilia;
     private Long idMatricula;
         
-    private AlunoDto(){}
+    public AlunoDto(Integer id, int codMuncipal)
+    {
+        this.id = id;
+        this.codMuncipal = codMuncipal;
+    }
+    
+    public AlunoDto(Integer id, String nome)
+    {
+        this.id = id;
+        this.nome = nome;
+    }
     
     public AlunoDto getInstance(Aluno aluno)
     {
@@ -30,5 +40,20 @@ public class AlunoDto
         pai = aluno.getPai();
         bolsaFamilia = aluno.ehBeneficiario();
         return this;
+    }
+    
+    public Integer getId()
+    {
+        return this.id;
+    }
+    
+    public int getCodMunicipal()
+    {
+        return this.codMuncipal;
+    }
+    
+    public String getNome()
+    {
+        return this.nome;
     }
 }

@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Aluno implements BolsaFamilia
 {
-    private Long id = null;
+    private Integer id = null;
     private int codMunicipal = 0;
     private String nome = "";
     private String mae = "";
@@ -122,7 +122,7 @@ public class Aluno implements BolsaFamilia
         return this.matriculas.get(i);
     }
     
-    public Long getId()
+    public Integer getId()
     {
         return this.id;
     }
